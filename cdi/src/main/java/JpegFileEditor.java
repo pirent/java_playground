@@ -1,6 +1,6 @@
-import javax.inject.Named;
+import qualifier.JpegFileEditorQualifier;
 
-@Named("JpegFileEditor")
+@JpegFileEditorQualifier
 public class JpegFileEditor implements ImageFileEditor {
     @Override
     public String openFile(String fileName) {

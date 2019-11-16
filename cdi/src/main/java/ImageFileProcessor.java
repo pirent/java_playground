@@ -1,5 +1,6 @@
 import javax.inject.Inject;
-import javax.inject.Named;
+
+import qualifier.PngFileEditorQualifier;
 
 public class ImageFileProcessor {
     
@@ -7,7 +8,7 @@ public class ImageFileProcessor {
     private TimeLogger timeLogger;
 
     @Inject
-    public ImageFileProcessor(@Named("GifFileEditor") ImageFileEditor editor, TimeLogger timeLogger) {
+    public ImageFileProcessor(@PngFileEditorQualifier ImageFileEditor editor, TimeLogger timeLogger) {
         this.editor = editor;
         this.timeLogger = timeLogger;
     }
