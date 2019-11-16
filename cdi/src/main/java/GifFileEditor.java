@@ -1,6 +1,6 @@
-import javax.enterprise.inject.Alternative;
+import javax.inject.Named;
 
-@Alternative
+@Named("GifFileEditor")
 public class GifFileEditor implements ImageFileEditor {
     @Override
     public String openFile(String fileName) {

@@ -1,11 +1,12 @@
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class ImageFileProcessor {
     
     private ImageFileEditor editor;
 
     @Inject
-    public ImageFileProcessor(ImageFileEditor editor) {
+    public ImageFileProcessor(@Named("GifFileEditor") ImageFileEditor editor) {
         this.editor = editor;
     }
 
